@@ -1,0 +1,10 @@
+[edit]
+  command = "micro"
+  
+[data]
+	email = "easy.quest@vk.com"
+	name = "Ivan Yatrebov"
+
+[git]
+  autoCommit = true
+  autoPush = true
