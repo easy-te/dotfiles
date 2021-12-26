@@ -463,3 +463,5 @@ let g:mkdp_filetypes = ['markdown']
 " ============================
 " Markdown preview in browser(End)
 " ============================
+
+autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%"
