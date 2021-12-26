@@ -4,4 +4,4 @@
 [edit]
 	command = "nvim"
     # command = "code"
-    args = ["--wait"]
+    # args = ["--wait"]
