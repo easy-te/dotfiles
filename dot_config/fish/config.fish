@@ -14,7 +14,6 @@ colorscript -e crunch
 set -U __done_min_cmd_duration 10000
 set -U __done_notification_urgency_level low
 
-source /opt/asdf-vm/asdf.fish
 ## Environment setup
 # Apply .profile: use this to put fish compatible .profile stuff in
 if test -f ~/.fish_profile
@@ -154,3 +153,5 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 set PATH "$HOME/.symfony/bin:$PATH"
 set PATH "~/.npm-global/bin:$PATH"
 set PATH "/home/zzz/.local/share/gem/ruby/3.0.0/bin:$PATH"
+source /opt/asdf-vm/asdf.fish
+
