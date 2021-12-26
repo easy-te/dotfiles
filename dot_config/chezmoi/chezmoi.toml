@@ -2,5 +2,6 @@
     autoCommit = true
     autoPush = true
 [edit]
-    command = "code"
+	command = "nvim"
+    # command = "code"
     args = ["--wait"]
