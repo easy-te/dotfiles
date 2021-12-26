@@ -64,6 +64,10 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 Plug 'mbbill/undotree'
 
+Plug 'alker0/chezmoi.vim'
+
+Plug 'Lilja/vim-chezmoi'
+
 Plug 'junegunn/vim-easy-align'
 
 Plug 'itchyny/calendar.vim'
@@ -91,6 +95,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 
 " Initialize plugin system
 call plug#end()
+
+# Chezmoi
+let g:chezmoi = "enabled"
 
 "====
 "====Coc-Nvim
