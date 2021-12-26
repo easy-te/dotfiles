@@ -14,7 +14,7 @@ colorscript -e crunch
 set -U __done_min_cmd_duration 10000
 set -U __done_notification_urgency_level low
 
-
+source /opt/asdf-vm/asdf.fish
 ## Environment setup
 # Apply .profile: use this to put fish compatible .profile stuff in
 if test -f ~/.fish_profile
