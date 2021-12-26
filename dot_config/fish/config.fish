@@ -154,4 +154,4 @@ set PATH "$HOME/.symfony/bin:$PATH"
 set PATH "~/.npm-global/bin:$PATH"
 set PATH "/home/zzz/.local/share/gem/ruby/3.0.0/bin:$PATH"
 source /opt/asdf-vm/asdf.fish
-
+swt PATH "~/.local/lib/RubyMine-2021.3/bin:$PATH"
