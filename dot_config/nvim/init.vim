@@ -27,7 +27,7 @@ if exists('g:vscode')
     " VSCode extension
 else
     " ordinary neovim
-
+endif
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -465,4 +465,3 @@ let g:mkdp_filetypes = ['markdown']
 " ============================
 
 autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%"
-endif
