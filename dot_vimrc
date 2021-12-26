@@ -18,13 +18,6 @@ set wildmode=list:longest,full
 "   <1000  Contents of registers (up to 1000# lines each) will be
 set viminfo='50,<10000,s100
 
-"VS-CODE
-if exists('g:vscode')
-    " VSCode extension
-else
-    " ordinary neovim
-endif
-
 "====
 "====Plugins
 "====
