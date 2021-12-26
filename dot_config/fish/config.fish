@@ -153,3 +153,4 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
 set PATH "$HOME/.symfony/bin:$PATH"
 set PATH "~/.npm-global/bin:$PATH"
+set PATH "/home/zzz/.local/share/gem/ruby/3.0.0/bin:$PATH"
