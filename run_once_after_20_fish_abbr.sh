@@ -15,3 +15,4 @@ abbr z 'chezmoi '
 abbr ze 'chezmoi edit --apply '
 abbr pi ".venv/bin/python -m pip install -U "
 abbr m "micro "
+abbr sshd "sudo /sbin/sshd -h ~/.ssh/id_rsa;ip addres |grep 192.168."
