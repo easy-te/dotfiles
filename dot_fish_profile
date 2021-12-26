@@ -18,7 +18,7 @@ function gp
 end
 
 function venv
-  $HOME/.asdf/shims/python -m venv .venv $argv;
+  python -m venv .venv $argv;
   .venv/bin/python -m pip install -U pip setuptools wheel pip-tools yapf autoflake isort coverage $argv;
 end
 
