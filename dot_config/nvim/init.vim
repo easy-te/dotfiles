@@ -22,13 +22,6 @@ set viminfo='50,<10000,s100
 "====Plugins
 "====
 
-"VS-CODE
-if exists('g:vscode')
-    " VSCode extension
-else
-    " ordinary neovim
-endif
-
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -36,7 +29,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 " Install vim-plug if not found
-if empty(glob('~/.vim/autoload/plug.vim'))
+if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
