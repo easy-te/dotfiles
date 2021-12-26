@@ -96,7 +96,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 " Initialize plugin system
 call plug#end()
 
-# Chezmoi
+" Chezmoi
 let g:chezmoi = "enabled"
 
 "====
