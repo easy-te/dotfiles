@@ -226,3 +226,4 @@ alias upd="/usr/bin/update"
 
 . $HOME/.asdf/completions/asdf.bash
 export PATH=/home/zzz/.local/bin:$PATH
+. torsocks on
