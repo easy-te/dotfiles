@@ -1,5 +1,12 @@
-[init]
-	defaultBranch = main
 [user]
-	email = u0_a272@localhost.com
-	name = termux
+	name = Ivan Yastrebov
+	email = easy.quest@vk.com
+[core]
+	editor = nano
+[init]
+ 	defaultBranch = main
+[color]
+	status = auto
+	branch = auto
+	interactive = auto
+	diff = auto

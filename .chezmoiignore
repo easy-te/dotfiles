@@ -1,9 +1,14 @@
 all.snippets
-## TERMUX
-{{- if eq .chezmoi.os "android" }}
+{{ if ne .chezmoi.os "linux" }}
 run_once_after_30_shell_color_scripts.sh
-run_once_after_20_zsh_alias.sh
-all.snippets
-{{- end }}
+    {{ if ne .chezmoi.osRelease.id "garuda" }}
+
+    {{ end }}
+{{ end }}
+
+## TERMUX
+{{ if ne .chezmoi.os "android" }}
+run_once_after_10_pkg_install.sh
+{{ end }}
 ## END TERMUX
 #-----------#
