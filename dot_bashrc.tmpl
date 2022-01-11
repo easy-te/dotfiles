@@ -1,3 +1,18 @@
+## TERMUX
+{{- if eq .chezmoi.os "android" }}
+printf 'Hello Android'
+python -c "from click import secho as echo;echo('HELLO TERMUX',bg='yellow',fg='black')"
+{{- end }}
+## END TERMUX
+#-----------#
+## KDE-GARUDA
+{{- if eq .chezmoi.osRelease.id "garuda" }}
+colorscript -e crunch
+printf 'Hello garuda'
+python -c "from click import secho as echo;echo('HELLO GARUDA',bg='yellow',fg='black')"
+{{- end }}
+## END KDE-GARUDA
+#-----------#
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
