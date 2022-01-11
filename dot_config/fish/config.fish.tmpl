@@ -1,4 +1,9 @@
-﻿## Set values
+﻿## TERMUX
+{{- if eq .chezmoi.os "android" }}
+printf 'Hello Android'
+python -c "from click import secho as echo;echo('HELLO TERMUX',bg='yellow',fg='black')"
+{{- end }}
+## Set values
 # Hide welcome message
 set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT "1"
