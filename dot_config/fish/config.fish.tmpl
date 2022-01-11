@@ -1,7 +1,11 @@
-﻿## TERMUX
+A﻿## TERMUX
 {{- if eq .chezmoi.os "android" }}
 printf 'Hello Android'
 python -c "from click import secho as echo;echo('HELLO TERMUX',bg='yellow',fg='black')"
+## Starship prompt
+if status --is-interactive
+   source ("starship" init fish --print-full-init | psub)
+end
 {{- end }}
 ## Set values
 # Hide welcome message
