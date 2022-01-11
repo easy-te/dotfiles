@@ -1,6 +1,11 @@
 {{- if eq .chezmoi.osRelease.id "garuda" }}
 printf 'Hello garuda' 
 {{- end }}
+## TERMUX
+{{- if eq .chezmoi.os "android" }}
+python -c "from click import secho as echo;echo('HELLO TERMUX',bg='yellow',fg='black')"
+{{- end }}
+## UBUNTU
 {{- if eq .chezmoi.osRelease.id "ubuntu" }}
 ## Path section
 # Set $PATH if ~/.local/bin exist
