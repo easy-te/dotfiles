@@ -1,5 +1,4 @@
 all.snippets
 {{- if eq eq .chezmoi.osRelease.id "garuda" }}
-~/.zshrc
 dot_zshrc
 {{- end }}
