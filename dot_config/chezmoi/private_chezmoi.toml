@@ -2,7 +2,7 @@
     autoCommit = true
     autoPush = true
 [edit]
-    command = "kate"
-    argv = ["-sn"]
+    command = "nano"
+    # argv = ["-sn"]
     # command = "code"
     # args = ["--wait"]
