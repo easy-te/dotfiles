@@ -3,6 +3,7 @@ printf 'Hello garuda'
 {{- end }}
 ## TERMUX
 {{- if eq .chezmoi.os "android" }}
+printf 'Hello Android'
 python -c "from click import secho as echo;echo('HELLO TERMUX',bg='yellow',fg='black')"
 {{- end }}
 ## UBUNTU
