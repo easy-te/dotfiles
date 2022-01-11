@@ -7,7 +7,8 @@ run_once_after_10_pkg_install.sh
 #-----------#
 {{ if ne .chezmoi.os "linux" }}
 run_once_after_30_shell_color_scripts.sh
-    {{ if ne .chezmoi.osRelease.id "garuda" }}
-### 
-    {{ end }}
+{{ end }}
+
+{{ if ne .chezmoi.osRelease.id "garuda" }}
+run_once_after_30_shell_color_scripts.sh
 {{ end }}
