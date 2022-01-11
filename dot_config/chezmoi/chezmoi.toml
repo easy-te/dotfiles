@@ -2,6 +2,7 @@
     autoCommit = true
     autoPush = true
 [edit]
-    command = "micro"
+    command = "kate"
+    argv = "-sn 2>/dev/null &"
     # command = "code"
     # args = ["--wait"]
