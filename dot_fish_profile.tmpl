@@ -20,8 +20,13 @@ end
 {{- end }}
 ## END TERMUX
 #############
+
+
+
+
+{{- if eq .chezmoi.os "linux" }}
 ## KDE-GARUDA
-{{- if eq .chezmoi.osRelease.id "garuda" }}
+	{{- if eq .chezmoi.osRelease.id "garuda" }}
 set project  /home/zzz/Projects
 cd $project
 #GOROOT环境变量设置
@@ -65,5 +70,6 @@ end
 
 
 set MYVIMRC ~/.vimrc
+	{{- end }}
 {{- end }}
 ## END KDE-GARUDA
