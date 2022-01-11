@@ -3,6 +3,6 @@
     autoPush = true
 [edit]
     command = "kate"
-    argv = ["-sn 2>/dev/null"]
+    argv = ["-sn"]
     # command = "code"
     # args = ["--wait"]
