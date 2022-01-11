@@ -16,7 +16,7 @@ set -gx PATH $HOME/.local/bin $PATH
 set -gx PATH ~/.npm-global/bin $PATH
 
 function chezmoi-cd
-	cd $(chezmoi source-path)
+	cd (chezmoi source-path)
 end
 
 function gp
