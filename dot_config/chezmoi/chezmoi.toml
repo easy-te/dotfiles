@@ -2,7 +2,7 @@
     autoCommit = true
     autoPush = true
 [edit]
-    command = "kate -sn 2>/dev/null &"
-    #argv = "-sn 2>/dev/null &"
+    command = "kate"
+    argv = ["-sn 2>/dev/null"]
     # command = "code"
     # args = ["--wait"]
