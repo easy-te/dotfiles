@@ -1,3 +1,27 @@
+## TERMUX
+{{- if eq .chezmoi.os "android" }}
+function chezmoi-cd
+	cd (chezmoi source-path)
+end
+
+function gp
+    set text (uname --operating-system), (date)
+    git add -A .;git commit -am "$text";git push $argv;
+end
+
+function venv
+  python -m venv .venv $argv;
+  .venv/bin/python -m pip install -U pip setuptools wheel pip-tools yapf autoflake isort coverage $argv;
+end
+
+function envrc
+  printf "#!/usr/bin/env bash \nsource .venv/bin/activate" > .envrc;direnv allow
+end
+{{- end }}
+## END TERMUX
+#############
+## KDE-GARUDA
+{{- if eq .chezmoi.osRelease.id "garuda" }}
 set project  /home/zzz/Projects
 cd $project
 #GOROOT环境变量设置
@@ -6,7 +30,7 @@ cd $project
 set -gx PATH /usr/local/go/bin $PATH
 #GOPATH环境变量设置（go工作目录）
 set -Ux GOPATH $HOME/go
-set -Ux GOBIN $GOPATH/bin 
+set -Ux GOBIN $GOPATH/bin
 # 启用 Go Modules 功能
 set -Ux GO111MODULE on
 # 配置 GOPROXY 环境变量
@@ -31,7 +55,7 @@ end
 
 function envrc
   printf "#!/usr/bin/env bash \nsource .venv/bin/activate" > .envrc;direnv allow
-end 
+end
 
 function ff --description 'Как **, но возвращает только обычные файлы.'
     # Это также игнорирует каталоги .git.
@@ -41,3 +65,5 @@ end
 
 
 set MYVIMRC ~/.vimrc
+{{- end }}
+## END KDE-GARUDA
