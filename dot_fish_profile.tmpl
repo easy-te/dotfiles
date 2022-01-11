@@ -1,22 +1,24 @@
 ## TERMUX
 {{- if eq .chezmoi.os "android" }}
-function chezmoi-cd
-	cd (chezmoi source-path)
+# cd codePath #  
+function cd-code
+    set codePath ~/code;cd $codePath
 end
-
+function chezmoi-cd
+    cd (chezmoi source-path)
+end
 function gp
     set text (uname --operating-system), (date)
     git add -A .;git commit -am "$text";git push $argv;
 end
-
 function venv
   python -m venv .venv $argv;
   .venv/bin/python -m pip install -U pip setuptools wheel pip-tools yapf autoflake isort coverage $argv;
-end
-
-function envrc
   printf "#!/usr/bin/env bash \nsource .venv/bin/activate" > .envrc;direnv allow
 end
+#function envrc
+#  printf "#!/usr/bin/env bash \nsource .venv/bin/activate" > .envrc;direnv allow
+#end
 {{- end }}
 ## END TERMUX
 #############
@@ -27,20 +29,18 @@ end
 {{- if eq .chezmoi.os "linux" }}
 ## KDE-GARUDA
 	{{- if eq .chezmoi.osRelease.id "garuda" }}
-set project  /home/zzz/Projects
-cd $project
 #GOROOT环境变量设置
 ## set -gx PATH ~/.local/bin $PATH
 ## set -Ux FOO bar
 set -gx PATH /usr/local/go/bin $PATH
-#GOPATH环境变量设置（go工作目录）
+# GOPATH工作目录）
 set -Ux GOPATH $HOME/go
 set -Ux GOBIN $GOPATH/bin
-# 启用 Go Modules 功能
+# Go Modules 功能
 set -Ux GO111MODULE on
-# 配置 GOPROXY 环境变量
+# GOPROXY 环境变量
 set -Ux GOPROXY https://goproxy.cn
-#牛云也出了个国内代理 goproxy.cn 方便国内用户更快的访问
+# goproxy.cn 方便国内用户更快的访问
 set -gx PATH $HOME/.local/bin $PATH
 set -gx PATH ~/.npm-global/bin $PATH
 
@@ -68,8 +68,8 @@ function ff --description 'Как **, но возвращает только о�
         sed -n -e '/^\.\/\.git$/n' -e 's/^\.\///p'
 end
 
-
 set MYVIMRC ~/.vimrc
 	{{- end }}
 {{- end }}
 ## END KDE-GARUDA
+#################
