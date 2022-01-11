@@ -6,7 +6,11 @@ python -c "from click import secho as echo;echo('HELLO TERMUX',bg='yellow',fg='b
 ## END TERMUX
 #-----------#
 ## KDE-GARUDAA 
-{{- if eq .chezmoi.os "linux" ( eq .chezmoi.osRelease.id "garuda") }}
+{{- if eq .chezmoi.os "linux" }}
+
+	{{ if  eq .chezmoi.osRealease "garuda" }}
+
+	{{ end }}
 colorscript -e crunch
 printf 'Hello garuda'\n
 python -c "from click import secho as echo;echo('HELLO GARUDA',bg='yellow',fg='black')"
