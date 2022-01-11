@@ -1,3 +1,7 @@
+{{- if eq .chezmoi.osRelease.id "garuda" }}
+printf 'Hello garuda' 
+{{- end }}
+{{- if eq .chezmoi.osRelease.id "ubuntu" }}
 ## Path section
 # Set $PATH if ~/.local/bin exist
 if [ -d "$HOME/.local/bin" ]; then
@@ -227,3 +231,4 @@ alias upd="/usr/bin/update"
 . $HOME/.asdf/completions/asdf.bash
 export PATH=/home/zzz/.local/bin:$PATH
 #. torsocks on
+{{- end }}
