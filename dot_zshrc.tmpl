@@ -14,8 +14,8 @@ python -c "from click import secho as echo;echo('HELLO GARUDA',bg='yellow',fg='b
 ## END KDE-GARUDA
 	{{- end }}
 #-----------#
-## UBUNTU
 	{{- if eq .chezmoi.osRelease.id "ubuntu" }}
+## UBUNTU
 ## Path section
 # Set $PATH if ~/.local/bin exist
 if [ -d "$HOME/.local/bin" ]; then
@@ -245,5 +245,7 @@ alias upd="/usr/bin/update"
 . $HOME/.asdf/completions/asdf.bash
 export PATH=/home/zzz/.local/bin:$PATH
 #. torsocks on
+## END UBUNTU
+#############
 	{{- end }}
 {{- end }}
