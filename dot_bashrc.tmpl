@@ -1,25 +1,19 @@
-## TERMUX
 {{- if eq .chezmoi.os "android" }}
+## TERMUX
 python -c "from click import secho as echo;echo('HELLO TERMUX',bg='yellow',fg='black')"
-{{- end }}
 ## END TERMUX
-#############
-
-
+{{- end }}
 #-----------#
-## KDE-GARUDA
 {{- if eq .chezmoi.os "linux" }}
 	{{- if eq .chezmoi.osRelease.id "garuda" }}
+## KDE-GARUDA
 colorscript -e crunch
 python -c "from click import secho as echo;echo('HELLO GARUDA',bg='yellow',fg='black')"
-	{{- end }}
 ## END KDE-GARUDA
-#################
-
+	{{- end }}
 #-----------#
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-
 # Load starship prompt if starship is installed
 if  [ -x /usr/bin/starship ]; then
     __main() {
