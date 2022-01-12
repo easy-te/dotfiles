@@ -1,3 +1,4 @@
+eval (direnv hook fish)
 {{- if eq .chezmoi.os "android" }}
 ## TERMUX
 python -c "from click import secho as echo;echo('HELLO TERMUX',bg='yellow',fg='black')"
@@ -177,4 +178,3 @@ setxkbmap "us,ru" ,"winkeys" "grp:alt_shift_toggle,grep_led:scroll"
 #############
 	{{- end }}
 {{- end }}
-eval (direnv hook fish)
