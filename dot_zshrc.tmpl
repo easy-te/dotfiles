@@ -1,6 +1,5 @@
 {{- if eq .chezmoi.os "android" }}
 ## TERMUX
-printf 'Hello Android'\n
 python -c "from click import secho as echo;echo('HELLO TERMUX',bg='yellow',fg='black')"
 ## END TERMUX
 {{- end }}
