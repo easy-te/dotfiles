@@ -1,11 +1,10 @@
-## TERMUX
 {{- if eq .chezmoi.os "android" }}
+## TERMUX
 printf 'Hello Android'\n
 python -c "from click import secho as echo;echo('HELLO TERMUX',bg='yellow',fg='black')"
-{{- end }}
 ## END TERMUX
+{{- end }}
 #-----------#
-
 {{- if eq .chezmoi.os "linux" }}
 ## KDE-GARUDA
 	{{- if eq .chezmoi.osRelease.id "garuda" }}
