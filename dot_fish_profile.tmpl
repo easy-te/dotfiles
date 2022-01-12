@@ -1,5 +1,5 @@
-## TERMUX
 {{- if eq .chezmoi.os "android" }}
+## TERMUX## TERMUX
 # cd codePath #  
 function cd-code
     set codePath ~/code;cd $codePath
@@ -19,13 +19,12 @@ end
 #function envrc
 #  printf "#!/usr/bin/env bash \nsource .venv/bin/activate" > .envrc;direnv allow
 #end
-{{- end }}
 ## END TERMUX
 #############
-
+{{- end }}
 {{- if eq .chezmoi.os "linux" }}
-## KDE-GARUDA
 	{{- if eq .chezmoi.osRelease.id "garuda" }}
+  ## KDE-GARUDA
 #GOROOT环境变量设置
 ## set -gx PATH ~/.local/bin $PATH
 ## set -Ux FOO bar
@@ -53,11 +52,13 @@ end
 function venv
   python -m venv .venv $argv;
   .venv/bin/python -m pip install -U pip setuptools wheel pip-tools yapf autoflake isort coverage $argv;
-end
-
-function envrc
   printf "#!/usr/bin/env bash \nsource .venv/bin/activate" > .envrc;direnv allow
 end
+
+#
+#function envrc
+#  printf "#!/usr/bin/env bash \nsource .venv/bin/activate" > .envrc;direnv allow
+#end
 
 function ff --description 'Как **, но возвращает только обычные файлы.'
     # Это также игнорирует каталоги .git.
@@ -68,5 +69,4 @@ end
 set MYVIMRC ~/.vimrc
 	{{- end }}
 {{- end }}
-## END KDE-GARUDA
-#################
+
