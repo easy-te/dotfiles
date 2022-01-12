@@ -1,18 +1,27 @@
-## TERMUX
 {{- if eq .chezmoi.os "android" }}
-printf 'Hello Android'
+## TERMUX
 python -c "from click import secho as echo;echo('HELLO TERMUX',bg='yellow',fg='black')"
 ## Starship prompt
 if status --is-interactive
    source ("starship" init fish --print-full-init | psub)
 end
 {{- end }}
+#-----------#
+{{- if eq .chezmoi.os "linux" }}
+	{{- if eq .chezmoi.osRelease.id "garuda" }}
+## KDE-GARUDA
+colorscript -e crunch
+python -c "from click import secho as echo;echo('HELLO GARUDA',bg='yellow',fg='black')"
+## END KDE-GARUDA
+	{{- end }}
+#-----------#
+	{{- if eq .chezmoi.osRelease.id "ubuntu" }}
+## UBUNTU
 ## Set values
 # Hide welcome message
 set fish_greeting
 set VIRTUAL_ENV_DISABLE_PROMPT "1"
 set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
-eval (direnv hook fish)
 set NPM_CONFIG_PREFIX ~/.npm-global
 ## Export variable need for qt-theme
 if type "qtile" >> /dev/null 2>&1
@@ -164,3 +173,8 @@ set PATH "~/.npm-global/bin:$PATH"
 set PATH "/home/zzz/.local/share/gem/ruby/3.0.0/bin:$PATH"
 source /opt/asdf-vm/asdf.fish
 setxkbmap "us,ru" ,"winkeys" "grp:alt_shift_toggle,grep_led:scroll"
+## END UBUNTU
+#############
+	{{- end }}
+{{- end }}
+eval (direnv hook fish)
