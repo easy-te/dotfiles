@@ -1,15 +1,19 @@
-all.snippets
+# machine-specific configuration
+{{- if eq .chezmoi.os "android" }}
 ## TERMUX
-{{ if ne .chezmoi.os "android" }}
-run_once_after_10_pkg_install.sh
-{{ end }}
-## END TERMUX
-#-----------#
-{{ if ne .chezmoi.os "linux" }}
+# это будет включено только в  termux
 run_once_after_30_shell_color_scripts.sh
-{{ end }}
-
-{{ if ne .chezmoi.osRelease.id "garuda" }}
-run_once_after_30_shell_color_scripts.sh
-{{ end }}
 settings.json
+## END TERMUX
+{{- end }}
+
+{{- if eq .chezmoi.osRelease.id "garuda" }}
+это будет включено только в "garuda"
+settings.json
+run_once_after_30_shell_color_scripts.sh
+settings.json
+{{- end }}
+
+all.snippets
+settings.json
+.vscode/
