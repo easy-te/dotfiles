@@ -11,15 +11,6 @@ settings.json
 .bashrc_android
 {{ end }}
 
-
-/* {{- if eq .chezmoi.osRelease.id "garuda" }}
-это будет включено только в "garuda"
-settings.json
-run_once_after_30_shell_color_scripts.sh
-settings.json
-.vscode/
-{{- end }}  */
-
 all.snippets
 
 {{ if ne .chezmoi.os "linux" }}
