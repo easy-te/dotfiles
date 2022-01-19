@@ -1,9 +1,10 @@
 {{- if eq .chezmoi.os "android" }}
-printf 'termux'
+#!/$PREFIX/bin/env fish
 #!/data/data/com.termux/files/usr/bin/fish
-
+for abbreviation in (abbr -l)
+    abbr -e $abbreviation
+end
 {{- end }}
-#!/usr/bin/env fish
 
 for abbreviation in (abbr -l)
     abbr -e $abbreviation
