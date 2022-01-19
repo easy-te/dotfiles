@@ -7,13 +7,22 @@ settings.json
 ## END TERMUX
 {{- end }}
 
-{{- if eq .chezmoi.osRelease.id "garuda" }}
+{{ if ne .chezmoi.os "android" }}
+.bashrc_android
+{{ end }}
+
+
+/* {{- if eq .chezmoi.osRelease.id "garuda" }}
 это будет включено только в "garuda"
 settings.json
 run_once_after_30_shell_color_scripts.sh
 settings.json
 .vscode/
-{{- end }}
+{{- end }}  */
 
 all.snippets
+
+{{ if ne .chezmoi.os "linux" }}
+.config/app/file.conf
+{{ end }}
 

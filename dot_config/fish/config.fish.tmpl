@@ -135,6 +135,7 @@ alias apt-get='man pacman'
 alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
 # Recent installed packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
+setxkbmap "us,ru" ,"winkeys" "grp:alt_shift_toggle,grep_led:scroll"
 ## END KDE-GARUDA
 	{{- end }}
 #-----------#
@@ -151,7 +152,6 @@ set PATH "$HOME/.symfony/bin:$PATH"
 set PATH "~/.npm-global/bin:$PATH"
 set PATH "/home/zzz/.local/share/gem/ruby/3.0.0/bin:$PATH"
 source /opt/asdf-vm/asdf.fish
-setxkbmap "us,ru" ,"winkeys" "grp:alt_shift_toggle,grep_led:scroll"
 ## END UBUNTU
 #############
 	{{- end }}

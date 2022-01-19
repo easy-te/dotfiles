@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../../../code/Новая папка"
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"titleBar.activeBackground": "#13200a"
+		}
+	}
+}
