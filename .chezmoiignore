@@ -12,3 +12,4 @@ run_once_after_30_shell_color_scripts.sh
 {{ if ne .chezmoi.osRelease.id "garuda" }}
 run_once_after_30_shell_color_scripts.sh
 {{ end }}
+settings.json
