@@ -12,8 +12,8 @@ settings.json
 settings.json
 run_once_after_30_shell_color_scripts.sh
 settings.json
+.vscode/
 {{- end }}
 
 all.snippets
-settings.json
-.vscode/
+
