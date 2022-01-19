@@ -1,3 +1,6 @@
+{{- if eq .chezmoi.os "android" }}
+printf 'termux'
+{{- end }}
 #!/usr/bin/env fish
 
 for abbreviation in (abbr -l)
