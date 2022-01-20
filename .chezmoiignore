@@ -6,7 +6,6 @@ chezmoi.code-workspace
 run_once_after_30_shell_color_scripts.sh.tmpl
 {{ end }}
 {{ if ne .chezmoi.os "linux" -}}
-run_once_after_30_shell_color_scripts.sh.tmpl
 .bashrc_android
 {{ end -}}
 
