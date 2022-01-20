@@ -3,7 +3,6 @@
 ## TERMUX
 # это не будет отображаться только в Termux
 chezmoi.code-workspace
-run_once_after_30_shell_color_scripts.sh.tmpl
 {{ end }}
 {{ if ne .chezmoi.os "linux" -}}
 .bashrc_android
@@ -12,3 +11,4 @@ run_once_after_30_shell_color_scripts.sh.tmpl
 
 .history
 
+run_once_after_30_shell_color_scripts.sh.tmpl
