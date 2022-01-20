@@ -1,12 +1,12 @@
 # machine-specific configuration
-{{ if eq .chezmoi.os "android" -}}
+#{{ if eq .chezmoi.os "android" -}}
 ## TERMUX
 # это не будет отображаться только в Termux
 chezmoi.code-workspace
-{{ end }}
-{{ if ne .chezmoi.os "linux" -}}
+#{{ end }}
+#{{ if ne .chezmoi.os "linux" -}}
 .bashrc_android
-{{ end -}}
+#{{ end -}}
 
 
 .history
