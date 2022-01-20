@@ -2,6 +2,8 @@
 {{ if eq .chezmoi.os "android" -}}
 ## TERMUX
 # это не будет отображаться только в Termux
+chezmoi.code-workspace
+run_once_after_30_shell_color_scripts.sh.tmpl
 
 {{ else if ne .chezmoi.os "android" -}}
 # это  будет отображаться только в Termux

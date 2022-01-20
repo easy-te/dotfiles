@@ -1,8 +1,8 @@
+{{ if eq .chezmoi.os "android" -}}
+#!/data/data/com.termux/files/usr/bin/env fish
 for abbreviation in (abbr -l)
     abbr -e $abbreviation
 end
-{{ if eq .chezmoi.os "android" -}}
-#!/$PREFIX/bin/env fish
 
 abbr g 'git '
 abbr gf 'git fetch '
