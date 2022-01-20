@@ -1,11 +1,17 @@
-{{- if eq .chezmoi.os "android" }}
+{{ if eq .chezmoi.os "android" -}}
 #!/$PREFIX/bin/env fish
-#!/data/data/com.termux/files/usr/bin/fish
-for abbreviation in (abbr -l)
-    abbr -e $abbreviation
-end
-{{- end }}
+pkg up -y
+abbr fix 'termux-fix-shebang '
 
+{{ else if eq .chezmoi.os "linux" -}}
+#!/usr/bin/fish
+sudo apt install ripgrep
+abbr sshd "sudo /sbin/sshd -h ~/.ssh/id_rsa;ip addres |grep 192.168."
+
+{{ else if eq .chezmoi.os "darwin" -}}
+#!/bin/sh
+brew install ripgrep
+{{ end -}}
 for abbreviation in (abbr -l)
     abbr -e $abbreviation
 end
@@ -21,4 +27,3 @@ abbr z 'chezmoi '
 abbr ze 'chezmoi edit --apply '
 abbr pi ".venv/bin/python -m pip install -U "
 abbr m "micro "
-abbr sshd "sudo /sbin/sshd -h ~/.ssh/id_rsa;ip addres |grep 192.168."
