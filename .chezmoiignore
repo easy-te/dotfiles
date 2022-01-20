@@ -13,3 +13,4 @@ chezmoi.code-workspace
 
 run_once_after_30_shell_color_scripts.sh.tmpl
 run_once_after_30_shell_color_scripts.sh
+30_shell_color_scripts.sh
