@@ -1,4 +1,4 @@
-    {
+{
         "workbench.colorTheme": "Base16 Dark Colors",
         "files.autoSave": "afterDelay",
         "editor.suggestSelection": "first",
@@ -52,8 +52,7 @@
         "workbench.editor.labelFormat": "long",
         "workbench.sideBar.location": "right",
         "workbench.startupEditor": "none",
-        "security.workspace.trust.untrustedFiles": "open",
-        "workbench.colorCustomizations": {
-            "titleBar.activeBackground": "#098235"
-        }
+        "security.workspace.trust.untrustedFiles": "open"
     }
+  
+}

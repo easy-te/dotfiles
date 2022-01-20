@@ -1,9 +1,9 @@
-for abbreviation in (abbr -l)
-    abbr -e $abbreviation
-end
 {{ if eq .chezmoi.os "android" -}}
 #!/$PREFIX/bin/env fish
 
+for abbreviation in (abbr -l)
+    abbr -e $abbreviation
+end
 abbr g 'git '
 abbr gf 'git fetch '
 abbr gs 'git status '
