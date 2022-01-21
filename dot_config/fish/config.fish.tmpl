@@ -119,8 +119,8 @@ end
 if status --is-interactive
    source ("/usr/bin/starship" init fish --print-full-init | psub)
 end
+set PYTHONSTARTUP ~/pythonstartup.py
 [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
-set PYTHONSTARTUP "$HOME/pythonstartup.py"
 # Common use
 alias grubup="sudo update-grub"
 alias fixpacman="sudo rm /var/lib/pacman/db.lck"
