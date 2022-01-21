@@ -1,11 +1,9 @@
-{{ if eq .chezmoi.os "android" -}}
-#!/data/data/com.termux/files/usr/bin/env fish
+
+#!/data/data/com.termux/files/usr/bin/env bash
 
 #for aliaseviation in (alias -l)
 #    alias -e $abbreviation
-{{ else if eq .chezmoi.os "linux" -}}
-#!/usr/bin/env zsh
-{{ end -}}
+
 alias g='git '
 alias gf='git fetch '
 alias gs='git status '
