@@ -15,14 +15,7 @@ set -U __done_notification_urgency_level low
 ## Functions
 
 # Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
-function __history_previous_command
-  switch (commandline -t)
-  case "!"
-    commandline -t $history[1]; commandline -f repaint
-  case "*"
-    commandline -i !
-  end
-end
+/*  */
 
 # if [ "$fish_key_bindings" = fish_vi_key_bindings ];
 #   bind -Minsert ! __history_previous_command
