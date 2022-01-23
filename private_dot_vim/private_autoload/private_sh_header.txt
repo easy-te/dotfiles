@@ -1,5 +1,5 @@
 :insert
-#!/usr/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
 #=============================================================================
 # filename.sh --- bash script
 # Copyright (c) 2053 @EasyQuest
