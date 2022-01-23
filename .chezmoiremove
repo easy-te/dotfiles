@@ -1,2 +1,3 @@
 run_once_after_30_shell_color_scripts.sh.tmpl
 chezmoi.code-workspace
+dot_fish_android
